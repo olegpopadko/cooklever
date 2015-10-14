@@ -5,7 +5,7 @@
  * Time: 12:16 PM
  */
 
-namespace AppBundle\Menu;
+namespace Cooklever\Bundle\AppBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;
