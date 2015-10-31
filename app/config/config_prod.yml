@@ -2,11 +2,11 @@ imports:
     - { resource: config.yml }
 
 parameters:
-    mailer_host: %mailer.host%
-    mailer_port: %mailer.port%
-    mailer_encryption: %mailer.encryption%
-    mailer_user: %mailer.user%
-    mailer_password: %mailer.password%
+    mailer_host: "%mailer.host%"
+    mailer_port: "%mailer.port%"
+    mailer_encryption: "%mailer.encryption%"
+    mailer_user: "%mailer.user%"
+    mailer_password: "%mailer.password%"
 
 #framework:
 #    validation:
