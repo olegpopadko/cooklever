@@ -22,10 +22,9 @@
         "florianbelhomme/flob-foundation-bundle": "~2.1.0",
         "knplabs/knp-menu-bundle": "~2",
         "knplabs/knp-paginator-bundle": "~2",
-        "friendsofsymfony/user-bundle": "~2.0@dev"
-    },
-    "require-dev": {
-        "sensio/generator-bundle": "~2.3"
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "sensio/generator-bundle": "~2.3",
+        "olegpopadko/composer-heroku-database-environment": "dev-master"
     },
     "scripts": {
         "post-root-package-install": [
@@ -58,7 +57,14 @@
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_host": "DATABASE_HOST",
+                "database_port": "DATABASE_PORT",
+                "database_name": "DATABASE_NAME",
+                "database_user": "DATABASE_USER",
+                "database_password": "DATABASE_PASSWORD"
+            }
         }
     }
 }
