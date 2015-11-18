@@ -28,7 +28,6 @@ class Ingredient
      */
     private $label;
 
-
     /**
      * Get id
      *

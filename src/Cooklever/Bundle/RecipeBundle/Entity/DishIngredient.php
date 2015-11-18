@@ -16,7 +16,11 @@ class DishIngredient
      * @var Dish
      *
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Cooklever\Bundle\AppBundle\Entity\Dish", cascade={"persist"})
+     * @ORM\ManyToOne(
+     *     targetEntity="Cooklever\Bundle\AppBundle\Entity\Dish",
+     *     inversedBy="ingredients",
+     *     cascade={"persist"}
+     * )
      * @ORM\JoinColumn(name="dish_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
     private $dish;
@@ -31,13 +35,13 @@ class DishIngredient
     private $ingredient;
 
     /**
-     * @var Unit
+     * @var IngredientUnit
      *
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Cooklever\Bundle\AppBundle\Entity\Unit", cascade={"persist"})
-     * @ORM\JoinColumn(name="unit_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
+     * @ORM\ManyToOne(targetEntity="Cooklever\Bundle\AppBundle\Entity\IngredientUnit", cascade={"persist"})
+     * @ORM\JoinColumn(name="ingredient_unit_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
-    private $unit;
+    private $ingredientUnit;
 
     /**
      * @return Dish
@@ -78,20 +82,20 @@ class DishIngredient
     }
 
     /**
-     * @return Unit
+     * @return IngredientUnit
      */
-    public function getUnit()
+    public function getIngredientUnit()
     {
-        return $this->unit;
+        return $this->ingredientUnit;
     }
 
     /**
-     * @param Unit $unit
+     * @param IngredientUnit $ingredientUnit
      * @return $this
      */
-    public function setUnit(Unit $unit)
+    public function setIngredientUnit(IngredientUnit $ingredientUnit)
     {
-        $this->unit = $unit;
+        $this->ingredientUnit = $ingredientUnit;
 
         return $this;
     }

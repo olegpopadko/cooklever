@@ -7,10 +7,10 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Ingredient
  *
- * @ORM\Table(name="cooklever_unit")
+ * @ORM\Table(name="cooklever_ingredient_unit")
  * @ORM\Entity
  */
-class Unit
+class IngredientUnit
 {
     /**
      * @var integer
@@ -27,7 +27,6 @@ class Unit
      * @ORM\Column(name="`label`", type="string", length=255)
      */
     private $label;
-
 
     /**
      * Get id

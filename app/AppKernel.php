@@ -19,11 +19,12 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Cooklever\Bundle\AppBundle\CookleverAppBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Flob\Bundle\FoundationBundle\FlobFoundationBundle(),
-            new \FOS\UserBundle\FOSUserBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Cooklever\Bundle\AppBundle\CookleverAppBundle(),
+            new Cooklever\Bundle\RecipeBundle\CookleverRecipeBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'])) {
