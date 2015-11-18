@@ -1,6 +1,6 @@
 <?php
 
-namespace Cooklever\Bundle\AppBundle\Entity;
+namespace Cooklever\Bundle\RecipeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

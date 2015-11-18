@@ -1,4 +1,8 @@
+parameters:
+    cooklever_recipe.form.recipe_type.class: Cooklever\Bundle\RecipeBundle\Form\Type\RecipeType
+
 services:
-#    cooklever_recipe.example:
-#        class: Cooklever\Bundle\RecipeBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    cooklever_recipe.form.recipe_type:
+        class: %cooklever_recipe.form.recipe_type.class%
+        tags:
+            - { name: form.type, alias: cooklever_bundle_recipe }

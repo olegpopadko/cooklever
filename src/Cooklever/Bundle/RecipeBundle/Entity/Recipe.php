@@ -1,17 +1,17 @@
 <?php
 
-namespace Cooklever\Bundle\AppBundle\Entity;
+namespace Cooklever\Bundle\RecipeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Dish
+ * Recipe
  *
- * @ORM\Table(name="cooklever_dish")
+ * @ORM\Table(name="cooklever_recipe")
  * @ORM\Entity
  */
-class Dish
+class Recipe
 {
     /**
      * @var integer
@@ -48,8 +48,8 @@ class Dish
      *
      * @ORM\Id
      * @ORM\OneToMany(
-     *     targetEntity="Cooklever\Bundle\AppBundle\Entity\DishIngredient",
-     *     mappedBy="dish",
+     *     targetEntity="Cooklever\Bundle\AppBundle\Entity\RecipeIngredient",
+     *     mappedBy="recipe",
      *     cascade={"ALL"},
      *     orphanRemoval=true
      * )
@@ -146,10 +146,10 @@ class Dish
     /**
      * Add ingredient
      *
-     * @param DishIngredient $ingredient
+     * @param RecipeIngredient $ingredient
      * @return $this
      */
-    public function addIngredient(DishIngredient $ingredient)
+    public function addIngredient(RecipeIngredient $ingredient)
     {
         $this->ingredients[] = $ingredient;
 
@@ -159,10 +159,10 @@ class Dish
     /**
      * Remove ingredient
      *
-     * @param DishIngredient $ingredient
+     * @param RecipeIngredient $ingredient
      * @return $this
      */
-    public function removeIngredient(DishIngredient $ingredient)
+    public function removeIngredient(RecipeIngredient $ingredient)
     {
         $this->ingredients->removeElement($ingredient);
 

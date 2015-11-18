@@ -1,23 +1,23 @@
 <?php
 
-namespace Cooklever\Bundle\AppBundle\Entity;
+namespace Cooklever\Bundle\RecipeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * DishIngredient
+ * RecipeIngredient
  *
- * @ORM\Table(name="cooklever_dish_ingredient")
+ * @ORM\Table(name="cooklever_recipe_ingredient")
  * @ORM\Entity
  */
-class DishIngredient
+class RecipeIngredient
 {
     /**
-     * @var Dish
+     * @var Recipe
      *
      * @ORM\Id
      * @ORM\ManyToOne(
-     *     targetEntity="Cooklever\Bundle\AppBundle\Entity\Dish",
+     *     targetEntity="Cooklever\Bundle\AppBundle\Entity\Recipe",
      *     inversedBy="ingredients",
      *     cascade={"persist"}
      * )
@@ -44,7 +44,7 @@ class DishIngredient
     private $ingredientUnit;
 
     /**
-     * @return Dish
+     * @return Recipe
      */
     public function getDish()
     {
@@ -52,10 +52,10 @@ class DishIngredient
     }
 
     /**
-     * @param Dish $dish
+     * @param Recipe $dish
      * @return $this
      */
-    public function setDish(Dish $dish)
+    public function setDish(Recipe $dish)
     {
         $this->dish = $dish;
 
