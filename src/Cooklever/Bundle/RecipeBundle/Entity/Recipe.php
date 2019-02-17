@@ -48,7 +48,7 @@ class Recipe
      *
      * @ORM\Id
      * @ORM\OneToMany(
-     *     targetEntity="Cooklever\Bundle\AppBundle\Entity\RecipeIngredient",
+     *     targetEntity="Cooklever\Bundle\RecipeBundle\Entity\RecipeIngredient",
      *     mappedBy="recipe",
      *     cascade={"ALL"},
      *     orphanRemoval=true

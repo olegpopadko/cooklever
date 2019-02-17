@@ -17,7 +17,7 @@ class RecipeIngredient
      *
      * @ORM\Id
      * @ORM\ManyToOne(
-     *     targetEntity="Cooklever\Bundle\AppBundle\Entity\Recipe",
+     *     targetEntity="Cooklever\Bundle\RecipeBundle\Entity\Recipe",
      *     inversedBy="ingredients",
      *     cascade={"persist"}
      * )
@@ -29,7 +29,7 @@ class RecipeIngredient
      * @var Ingredient
      *
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Cooklever\Bundle\AppBundle\Entity\Ingredient", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Cooklever\Bundle\RecipeBundle\Entity\Ingredient", cascade={"persist"})
      * @ORM\JoinColumn(name="ingredient_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
     private $ingredient;
@@ -38,7 +38,7 @@ class RecipeIngredient
      * @var IngredientUnit
      *
      * @ORM\Id
-     * @ORM\ManyToOne(targetEntity="Cooklever\Bundle\AppBundle\Entity\IngredientUnit", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Cooklever\Bundle\RecipeBundle\Entity\IngredientUnit", cascade={"persist"})
      * @ORM\JoinColumn(name="ingredient_unit_id", referencedColumnName="id", nullable=false, onDelete="CASCADE")
      */
     private $ingredientUnit;
